@@ -38,6 +38,63 @@ server.route([
                 }
             }
         }
+    },
+    {
+        method: 'POST',
+        path: '/products',
+        config: {
+            handler: (req, reply) => {
+                return reply([]);
+            },
+            description: 'Listar todos os produtos',
+            notes: 'Retorna os produtos',
+            tags: ['api'],
+            validate: {
+                query: {
+                    nome: Joi.string()
+                             .required()
+                            //  .description('nome do produto')
+                }
+            }
+        }
+    },
+    {
+        method: 'PUT',
+        path: '/products/:id',
+        config: {
+            handler: (req, reply) => {
+                return reply([]);
+            },
+            description: 'Listar todos os produtos',
+            notes: 'Retorna os produtos',
+            tags: ['api'],
+            validate: {
+                query: {
+                    nome: Joi.string()
+                             .required()
+                            //  .description('nome do produto')
+                }
+            }
+        }
+    },
+    {
+        method: 'DELETE',
+        path: '/products',
+        config: {
+            handler: (req, reply) => {
+                return reply([]);
+            },
+            description: 'Listar todos os produtos',
+            notes: 'Retorna os produtos',
+            tags: ['api'],
+            validate: {
+                query: {
+                    nome: Joi.string()
+                             .required()
+                            //  .description('nome do produto')
+                }
+            }
+        }
     }
 ]);
 
